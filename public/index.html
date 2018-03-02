@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <link rel="stylesheet" href="sass/css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+       <page></page>
+       <div id="home">
+        <div class="form-container">
+         <h1>
+             Buy and Sell Baby Items
+            </h1>
+
+        <form v-if="register">
+        <div class="form-row">
+            <h3>Username</h3>
+            <input v-model="newUser" type="text">
+            <h3>Password</h3>
+            <input v-model="newPassword" type="password">
+        </div>
+        <div class="form-row">
+            <h3>Zip Code</h3>
+            <input v-model="newZip" type="number">
+            <h3>Confirm Password</h3>
+            <input v-model="confirmPassword" type="password">
+        </div>
+            <br>
+            <button @click="what()" type="button">
+                New User
+            </button>
+            <button @click="toggle()" type="button">
+                    Existing User
+                </button>
+        </form>
+
+        <form v-else>
+            <h3>Username</h3>
+            <input type="text">
+            <h3>Password</h3>
+            <input type="password">
+            <br>
+            <button type="submit">
+                Login
+            </button>
+            <button @click="toggle()" type="button">
+                    New User
+                </button>
+            </form>
+        </div>
+            <img src="./assets/home.jpeg"></img>
+       </div>
+    </div>    
+
+
+    <script src="./dist/bundle.js"></script>
+</body>
+</html>

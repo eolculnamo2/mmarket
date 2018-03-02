@@ -1,0 +1,121 @@
+@import "variables";
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: $lightGrey;
+}
+#top{
+    margin: 0;
+    top: 0;
+    left: 0;
+    background-color: $lightPurple;
+    min-height: 3vh;
+    width: 100%;
+}
+header{
+    margin: 0;
+    background-color: $darkBlue;
+    width: 100%;
+    display: flex;
+    h1{
+        flex-grow: 2;
+        margin: 0;
+        padding: 25px;
+        font-size: 45px;
+        color: white;
+        font-family: 'Lobster', cursive;
+        @media screen and(max-width: 700px) {
+            display: block;
+            width: 100%;
+            text-align: center;
+            padding: 25px 0;
+        }
+    }
+    ul{
+        flex-grow: 1;
+        display: flex;
+        color: white;
+        width: 50vw;
+        list-style-type: none;
+        li{
+            padding: 25px;
+            cursor: pointer;
+            font-family: "open sans";
+            text-transform: uppercase;
+            &:hover{
+                color: $pink;
+            }
+            @media screen and(max-width:1200px){
+                display: none;
+            }
+        }
+    }
+    @media screen and (max-width: 1000px) {
+        ul{
+            margin: 0;
+            padding: 0;
+            border: 0;
+        }
+        display: block;
+    }
+}
+nav{
+    margin: 0;
+    background-color: $blue;
+    min-height: 5vh;
+    width: 100%;
+}
+
+#home{
+    display: flex;
+    width: 80%;
+    min-height: 85vh;
+    background-color: $darkPurple;
+    justify-content: space-around;
+    margin: auto;
+    flex-wrap: wrap;
+    h1{
+        font-family: 'Lobster', cursive;
+        color: white;
+        padding: 20px;
+        font-size: 35px;
+    }
+    img{
+        border: 4px solid $lightPurple;
+        width: 45%;
+        height: 45%;
+        margin: 50px 25px;
+        @media screen and (max-width: 700px){
+            width: 90%;
+        }
+    }
+    h3{
+        color: white;
+    }
+    .form-container{
+        text-align: center;
+    }
+    .form-row{
+        display: inline-block;
+    }
+    input{
+        border-radius: 5px;
+        padding: 5px 10px;
+    }
+    button{
+        padding: 5px 10px;
+        font-family: 'Lobster', cursive;
+        background-color: $darkBlue;
+        color: white;
+        cursor: pointer;
+        font-size: 18px;
+        margin: 10px 5px;
+        &:hover {
+            color: $pink;
+        }
+    }
+    @media screen and(max-width: 700px) {
+        width: 100%;
+    }
+}
